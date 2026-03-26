@@ -51,15 +51,24 @@ button:hover { background:#005a42; transform: translateY(-2px); }
 .footer { text-align:center; margin-top:40px; padding:20px; background:#f1f1f1; border-radius:10px; }
 @media(max-width:500px){ .container{padding:20px;} h1{font-size:28px;} .subtitulo{font-size:16px;} .how-it-works .steps{flex-direction:column;} }
 
-/* MENU LINKS ALINHADOS COM A CONTAINER */
+/* MENU LINKS CENTRALIZADOS */
 .menu {
-  max-width: 650px;          /* Mesma largura da container */
-  margin: 20px auto;          /* Centralizado igual a container */
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 15px;
-  padding: 0 20px;           /* Mesmo padding lateral da body/container */
+  justify-content: center;   /* centraliza horizontalmente */
+  align-items: center;       /* centraliza verticalmente */
+  gap: 20px;                 /* espaço entre os links */
+  margin: 20px 0;            /* distância do topo e do container */
+  flex-wrap: wrap;           /* quebra em linhas se a tela for pequena */
+}
+.menu a {
+  text-decoration: none;
+  color: #007B5E;
+  font-weight: 600;
+  font-size: 16px;
+}
+.menu a:hover {
+  text-decoration: underline;
+}
 }
 .menu a {
   text-decoration: none;
