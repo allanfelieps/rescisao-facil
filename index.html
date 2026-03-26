@@ -186,7 +186,49 @@ button:hover {
   font-weight:600;
 }
 .menu a:hover { text-decoration:underline; }
+
+body.dark-mode {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+  background: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+body.dark-mode .container {
+  background: #1c1c1c;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .resultado {
+  background: #222;
+  color: #f1f1f1;
+}
+
+body.dark-mode .help-text {
+  background: #2a2a2a;
+  border-color: #555;
+  color: #ddd;
+}
+
+body.dark-mode .menu a {
+  color: #00ffcc;
+}
+
+body.dark-mode button {
+  background: #00a88f;
+  color: #fff;
+}
+
 </style>
+
+
+  
+  
 </head>
 <body>
 
@@ -194,7 +236,6 @@ button:hover {
   <a href="index.html">Home</a> |
   <a href="sobre.html">Sobre</a> |
   <a href="privacidade.html">Privacidade</a>
-
   <button id="toggle-theme" style="margin-left:10px;padding:6px 12px;border:none;border-radius:6px;cursor:pointer;">🌙 Dark Mode</button>
 
 
