@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* { box-sizing: border-box; font-family: Arial, sans-serif; margin:0; padding:0;}
+* { box-sizing: border-box; font-family: Arial, sans-serif; margin:0; padding:0; }
 body {
   background: #f4f7fb;
   color: #333;
@@ -73,13 +73,15 @@ button:hover { background:#005a42; transform: translateY(-2px); }
 .footer { text-align:center; margin-top:40px; padding:20px; background:#f1f1f1; border-radius:10px; }
 @media(max-width:500px){ .container{padding:20px;} h1{font-size:28px;} .subtitulo{font-size:16px;} .how-it-works .steps{flex-direction:column;} }
 .menu { text-align:right; margin-bottom:20px; display:flex; justify-content:flex-end; align-items:center; gap:10px; }
+/* Links menu */
 .menu a { text-decoration:none; margin:0 5px; color:#007B5E; font-weight:600; }
 .menu a:hover { text-decoration:underline; }
 /* BOTÃO DARK MODE DISCRETO */
 #toggle-theme {
-  font-size:12px; padding:3px 8px; background:#007B5E; color:#fff; border:none; border-radius:6px; cursor:pointer; transition:0.3s;
+  font-size:14px; background:none; border:none; cursor:pointer; color:#007B5E;
+  transition:0.3s; padding:0; margin-left:10px;
 }
-#toggle-theme:hover { background:#005a42; }
+#toggle-theme:hover { color:#005a42; }
 
 /* DARK MODE */
 body.dark-mode { background:#121212; color:#f1f1f1; }
@@ -88,7 +90,7 @@ body.dark-mode .container { background:#1c1c1c; box-shadow:0 5px 25px rgba(0,0,0
 body.dark-mode .resultado { background:#222; color:#f1f1f1; }
 body.dark-mode .help-text { background:#2a2a2a; border-color:#555; color:#ddd; }
 body.dark-mode .menu a { color:#00ffcc; }
-body.dark-mode button { background:#00a88f; color:#fff; }
+body.dark-mode button:not(#toggle-theme) { background:#00a88f; color:#fff; }
 body.dark-mode .how-it-works .step { background:#2a2a2a; color:#f1f1f1; box-shadow:0 4px 12px rgba(0,0,0,0.5); }
 body.dark-mode .trust { background:#1e1e1e; }
 body.dark-mode .footer { background:#1c1c1c; color:#f1f1f1; }
@@ -146,9 +148,6 @@ body.dark-mode .footer { background:#1c1c1c; color:#f1f1f1; }
     <option value="sim">Sim</option>
     <option value="nao">Não</option>
   </select>
-  <div id="help-aviso" class="help-text">
-    O aviso prévio é o período que o empregado deve cumprir antes da saída.
-  </div>
 
   <button onclick="calcular()">Calcular</button>
   <button onclick="baixarPDF()">Baixar PDF</button>
@@ -214,7 +213,7 @@ const w=window.open('','','height=700,width=700');
 w.document.write('<pre>'+c+'</pre>'); w.document.close(); w.print();
 }
 
-// BOTÃO DARK MODE
+// DARK MODE DISCRETO
 const toggleThemeBtn = document.getElementById('toggle-theme');
 toggleThemeBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
