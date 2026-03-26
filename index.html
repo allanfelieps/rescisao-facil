@@ -51,9 +51,24 @@ button:hover { background:#005a42; transform: translateY(-2px); }
 .footer { text-align:center; margin-top:40px; padding:20px; background:#f1f1f1; border-radius:10px; }
 @media(max-width:500px){ .container{padding:20px;} h1{font-size:28px;} .subtitulo{font-size:16px;} .how-it-works .steps{flex-direction:column;} }
 
-/* MENU LINKS ALINHADOS À ESQUERDA */
+/* MENU LINKS ALINHADOS COM A CONTAINER */
 .menu {
-  text-align:left; display:flex; justify-content:flex-start; align-items:center; gap:15px; margin-bottom:20px;
+  max-width: 650px;          /* Mesma largura da container */
+  margin: 20px auto;          /* Centralizado igual a container */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  padding: 0 20px;           /* Mesmo padding lateral da body/container */
+}
+.menu a {
+  text-decoration: none;
+  color: #007B5E;
+  font-weight: 600;
+}
+.menu a:hover {
+  text-decoration: underline;
+}
 }
 .menu a { text-decoration:none; color:#007B5E; font-weight:600; }
 .menu a:hover { text-decoration:underline; }
